@@ -16,11 +16,5 @@
 Run these commands in techstart-api-local:
 
 
-/
-'
-'
-/
-"
-
-;
-:
+git remote -v | grep -c "push"
+git branch -r | wc -l
