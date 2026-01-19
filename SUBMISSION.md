@@ -15,6 +15,6 @@
 
 Run these commands in techstart-api-local:
 ```
-git remote -v | grep -c "push"
-git branch -r | wc -l
+git remote -v | grep -c "push" -> 4
+git branch -r | wc -l -> 6
 ```
