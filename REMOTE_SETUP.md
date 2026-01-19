@@ -3,23 +3,24 @@
 ## Current Remotes
 backup	git@github.com:vovkadenisov/techstart-api-backup.git (fetch)
 backup	git@github.com:vovkadenisov/techstart-api-backup.git (push)
+backup	git@github.com:vovkadenisov/techstart-api.git (push)
 origin	git@github.com:vovkadenisov/techstart-api.git (fetch)
-origin	git@github.com:vovkadenisov/techstart-api-backup.git (push)
 origin	git@github.com:vovkadenisov/techstart-api.git (push)
+origin	git@github.com:vovkadenisov/techstart-api-backup.git (push)
 
 ## Tracking Branches
-  develop ff2f9e5 change ver
-* main    1c4a00e [backup/main: ahead 3] Merge branch 'main' of github.com:vovkadenisov/techstart-api
+  develop d460558 Finalize remote repositories assignment
+* main    4981eb0 [origin/main: ahead 2] Finalize remote repositories assignment
 
 ## Fork Workflow Summary
-- Original repository: https://github.com/vovkadenisov/awesome-calculator.git
-- Fork repository: https://github.com/vovkadenisov1/calculator-fork.git
-- Upstream configuration: git remote add upstream git@github.com:vovkadenisov1/calculator-fork.git
+- Original repository: https://github.com/vovkadenisov/awesome-calculator
+- Fork repository: https://github.com/vovkadenisov1/calculator-fork
+- Upstream configuration: git remote add upstream git@github.com:vovkadenisov/awesome-calculator.git
 
 ## Backup Strategy
 - Primary remote: origin
 - Backup remote: backup
-- Sync command: [команда для синхронизации]
+- Sync command: git push origin --all && git push origin --tags
 
 ## Lessons Learned
-[2-3 предложения о работе с remote репозиториями]
+Важно разделять роли remotes: upstream для получения изменений, origin для своей публикации. Tracking веток (git branch -u ...) убирает путаницу, а fetch --prune помогает держать refs чистыми. Несколько push URL позволяют зеркалировать изменения в backup одним push.
